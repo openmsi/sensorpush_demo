@@ -16,6 +16,17 @@ class SensorPushArgumentParser(OpenMSIStreamArgumentParser):
                 "help": "The address (MAC or UUID) of the SensorPush device to connect to"
             },
         ],
+        "device_addresses": [
+            "optional",
+            {
+                "nargs": "+",
+                "default": "all",
+                "help": (
+                    "The addresses (MAC or UUID) of the SensorPush device to connect to. "
+                    "Set this to 'all' to automatically scan for SensorPush devices to use."
+                ),
+            },
+        ],
         "sampling_interval": [
             "optional",
             {
@@ -40,6 +51,6 @@ class SensorPushArgumentParser(OpenMSIStreamArgumentParser):
             "optional",
             {
                 "help": "An informal name to associate with the given SensorPush device",
-            }
-        ]
+            },
+        ],
     }
