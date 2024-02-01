@@ -35,7 +35,7 @@ class SensorPushArgumentParser(OpenMSIStreamArgumentParser):
                     "to CSV files (seconds). Inexact, as there is some lag in "
                     "communicating with sensors."
                 ),
-                "default": 10,
+                "default": 5,
                 "type": positive_int,
             },
         ],
