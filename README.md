@@ -37,13 +37,13 @@ The above will periodically write out small CSV files containing single readings
 
 for example.
 
-### Producer
+### Bare producer
 
-To produce readings to a topic:
+To produce bare reading messages to a topic:
 
     python src/sensor_push_producer.py --device_addresses [addr_1] [addr_2] --topic_name [topic_name] --sampling_interval [sample_secs]
 
-The above will launch a long-running producer program to produce readings to a topic as JSON-formatted strings. Add device addresses to pull readings from with the "`--device_addresses`" argument (space separated) or leave that argument out to produce readings from all devices detected (they will automatically connect and disconnect as they enter/leave range). Topic name and sampling interval are configurable, as well as the config file to use (should contain `[broker]` and `[producer]` sections; the default value is a good example of where to start to write a new one).)
+The above will launch a long-running producer program to produce readings to a topic as JSON-formatted strings. Add device addresses to pull readings from with the "`--device_addresses`" argument (space separated) or leave that argument out to produce readings from all devices detected (they will automatically connect and disconnect as they enter/leave range). Topic name and sampling interval are configurable, as well as the config file to use (should contain `[broker]` and `[producer]` sections; the default value is a good example of where to start to write a new one).
 
 ### Consumers
 
