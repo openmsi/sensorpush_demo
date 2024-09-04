@@ -31,7 +31,11 @@ To periodically write out CSV files with measurements in them:
 
     python src/sensor_push_csv_writer.py [device_address] [path_to_output_dir]
 
-The above will periodically write out small CSV files containing single readings from the device with the given address, adding them to the directory at `[path_to_output_dir]`. This program is useful to write out files that can then be produced by a regular OpenMSIStream producer with a DataFileUploadDirectory, for example.
+The above will periodically write out small CSV files containing single readings from the device with the given address, adding them to the directory at `[path_to_output_dir]`. This program is useful to write out files that can then be produced by a regular OpenMSIStream producer with a DataFileUploadDirectory with a command like:
+
+    DataFileUploadDirectory [path_to_output_dir] --topic_name [topic_name]
+
+for example.
 
 ### Producer
 
@@ -55,4 +59,4 @@ To run the file-based "StreamProcessor"-type program:
 
 The above will read OpenMSIStream DataFileChunk-formatted messages produced by the `sensor_push_csv_writer` program paired with an OpenMSIStream DataFileUploadDirectory (or similar).
 
-Both of the programs references above are more configurabl; see all options available by adding "`-h`" to the commands listed.
+Both of the programs references above are more configurable; see all options available by adding "`-h`" to the commands listed.
