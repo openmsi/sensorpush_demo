@@ -41,7 +41,7 @@ def main():
         "--n_blinks",
         type=int,
         default=10,
-        help="How many times to blink the LED on the device",
+        help="How many times to blink the LED on the device (default = 10)",
     )
     args = parser.parse_args()
     if args.n_blinks < 0 or args.n_blinks > 127:
